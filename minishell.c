@@ -11,8 +11,19 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
 	printf("hello world");
+}
+
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
